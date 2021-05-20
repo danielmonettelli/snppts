@@ -1,10 +1,11 @@
 ﻿@using X.PagedList.Mvc.Core;
-@using X.PagedList.Mvc.Common
+@using X.PagedList.Mvc.Core.Common;
+@using X.PagedList.Web.Common;
 @using X.PagedList;
 
 @model IEnumerable<Snppts.Infrastructure.IAmASnippet>
 
-@{
+@{ 
     ViewBag.Title = "Welcome to Snppts";
     ViewBag.Description = "A selection of Xamarin.Forms UI snippets for use in your own apps!";
 }
@@ -32,7 +33,7 @@
         </div>
     </div>
     <div class="row pager">
-        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions()
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Category", new { page }), new PagedListRenderOptions()
         {
             LinkToNextPageFormat = "»",
             LinkToPreviousPageFormat = "«",
@@ -43,7 +44,7 @@
             MaximumPageNumbersToDisplay = 0,
             DisplayEllipsesWhenNotShowingAllPageNumbers = false
         })
-    </div>
+    </div> 
 }
 else
 {

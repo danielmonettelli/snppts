@@ -30,14 +30,16 @@ namespace Snppts.Snippets
 
         public IEnumerable<Uri> ImageUris => new List<Uri>
         {
+            new Uri("https://github.com/alexandresanlim/XamarinUI.SubscriptionPlan/raw/master/SubscriptionPlan.XamarinUI/SubscriptionPlan.XamarinUI/Screenshots/animation.gif?raw=true"),
             new Uri("https://raw.githubusercontent.com/alexandresanlim/SubscriptionPlan.XamarinUI/master/SubscriptionPlan.XamarinUI/SubscriptionPlan.XamarinUI/Screenshots/android.jpg"),
             new Uri("https://raw.githubusercontent.com/alexandresanlim/SubscriptionPlan.XamarinUI/master/SubscriptionPlan.XamarinUI/SubscriptionPlan.XamarinUI/Screenshots/ios.png")
         };
 
         public IList<Category> Categories => new List<Category>
-        { 
+        {
             Category.CARDS,
-            Category.LISTS
+            Category.LISTS,
+            Category.CAROUSEL
         };
     }
 }
